@@ -11,7 +11,6 @@ predictService = PredictService()
 def predict():
     # Get the data from the POST request.
     data = request.get_json(force=True)
-    data = json.loads(data)
 
     # Make prediction using model loaded from disk as per the data.
     predict_request = [[data["Year"], data["Month"], data["Day"], data["Weekday"], data["WeekofYear"], data["Season"],
