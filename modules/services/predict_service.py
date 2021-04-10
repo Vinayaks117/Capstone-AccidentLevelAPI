@@ -13,7 +13,7 @@ class PredictService:
         print('filelocation',filelocation)
         
         os.chdir(cwd + '/modules/saved_models')
-        
+        print('cwd:',os.getcwd())
         #os.chdir('C:/Users/Prakash/PycharmProjects/AutoMLCapstoneProject/modules/saved_models')
         #filelocation = (cwd + '/PycharmProjects/AutoMLCapstoneProject/modules/saved_models/')  # For Linux
         #filename = (filelocation + 'finalised_ann_model.h5')
