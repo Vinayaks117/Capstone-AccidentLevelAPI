@@ -11,10 +11,13 @@ class PredictService:
         print('cwd:',cwd)
         filelocation = (cwd + '/modules/saved_models/')
         print('filelocation',filelocation)
-
+        
+        os.chdir(cwd + '/modules/saved_models')
+        
         #os.chdir('C:/Users/Prakash/PycharmProjects/AutoMLCapstoneProject/modules/saved_models')
         #filelocation = (cwd + '/PycharmProjects/AutoMLCapstoneProject/modules/saved_models/')  # For Linux
-        filename = (filelocation + 'finalised_ann_model.h5')
+        #filename = (filelocation + 'finalised_ann_model.h5')
+        filename = ('finalised_ann_model.h5')
         print('filename',filename)
 
         # Load the model
