@@ -15,9 +15,6 @@ class PredictService:
         
         arr = os.listdir('.')
         
-        # Reset the directory
-        os.chdir('/app')
-        
         # Load the best model with f1-score
         if float(arr[0][:6]) > float(arr[1][:6]):
             filename = str(arr[0])
@@ -31,5 +28,8 @@ class PredictService:
 
         accidentLevel = (np.asarray(model.predict(predict_request))).round()
         status = 'success'
-
+        
+        # Reset the directory
+        os.chdir('/app')
+        
         return status, accidentLevel
