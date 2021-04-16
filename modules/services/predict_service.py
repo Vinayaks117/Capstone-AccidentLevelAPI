@@ -13,7 +13,11 @@ class PredictService:
         if cwd == '/app':
             os.chdir(cwd + '/modules/saved_models')
         
+        print('cwd', os.getcwd())
+        
         arr = os.listdir('.')
+        
+        print('arr', arr)
         
         # Load the best model with f1-score
         if float(arr[0][:6]) > float(arr[1][:6]):
